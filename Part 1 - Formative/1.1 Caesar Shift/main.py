@@ -7,7 +7,7 @@ def caesar_encode(text, n):
     new_str = ""
     for let in text:
         index = alpha.index(let) + n
-        new_str += alpha[(index )]
+        new_str += alpha[(index ) % 26]
     return new_str
 
 

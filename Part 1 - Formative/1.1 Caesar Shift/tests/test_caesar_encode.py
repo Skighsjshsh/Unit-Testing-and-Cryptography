@@ -11,8 +11,9 @@ class MyTestCase(TestCase):
         self.assertEqual(caesar_encode("HELLOWORLD", 5), "MJQQTBTWQI")
 
     def test_caesar_encode_lowercase(self):
-        self.assertEqual(caesar_encode("HELLOWORLD", 5), "mjqqtbtwqi")
+        self.assertEqual(caesar_encode("helloworld", 5), "MJQQTBTWQI")
 
-    def test_caesar_encode_lowercase(self):
-        self.assertEqual(caesar_encode("HELLOWORLD", 5), "mjqqtbtwqi")
+    def test_caesar_encode_space(self):
+        self.assertEqual(caesar_encode("HELLO WORLD", 5), "MJQQTBTWQI")
+
 

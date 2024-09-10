@@ -9,3 +9,6 @@ class MyTestCase(TestCase):
     def test_caesar_decode_uppercase(self):
         self.assertEqual(caesar_decode("MJQQTBTWQI", 5), "HELLOWORLD")
 
+    def test_caesar_decode_lowercase(self):
+        self.assertEqual(caesar_decode("mjqqtbtwqi", 5), "HELLOWORLD")
+

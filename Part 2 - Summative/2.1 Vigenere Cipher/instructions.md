@@ -37,7 +37,6 @@ Some details to consider:
 - You should use the above test case to make sure your code is working properly!
 
 Finally, here's a hint - a reminder of how to use a for loop to access each letter in a string by index, instead of looping over each letter directly:
-
 ```python
 # CORRECT CODE to access by index
 

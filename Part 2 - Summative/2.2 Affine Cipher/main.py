@@ -36,8 +36,14 @@ def affine_decode(text, a, b):
     text = text.upper()
     text = text.replace(" ", "")
     word = ""
+    word2 = ""
     for i in range(len(text)):
-    return ''
+        index = alpha.index(text[i]) - b
+        word += alpha[index]
+    for i in range(len(word)):
+        index2 = (alpha.index(word[i]) * a) % 26
+        word2 += alpha[(index2) % 26]
+    return word2
 
 test = "HELLOWORLD"
 a = 3

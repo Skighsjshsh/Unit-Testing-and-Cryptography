@@ -33,17 +33,10 @@ def affine_encode(text, a, b):
     return word2
 
 def affine_decode(text, a, b):
-    text = text.upper()
-    text = text.replace(" ", "")
     word = ""
-    word2 = ""
     for i in range(len(text)):
-        index = alpha.index(text[i]) - b
-        word += alpha[index]
-    for i in range(len(word)):
-        index2 = (alpha.index(word[i]) * a) % 26
-        word2 += alpha[(index2) % 26]
-    return word2
+        word += alpha[(((alpha.index(text[i])) - b) * mod_inverse(a, 26)) % 26]
+    return word
 
 test = "HELLOWORLD"
 a = 3

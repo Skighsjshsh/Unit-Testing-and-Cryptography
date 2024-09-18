@@ -52,15 +52,19 @@ print(dec)
 # PART 2
 # These  are the functions you'll need to write:
 def convert_to_num(ngram):
-    return 0
+    number = 0
+    for i in range(len(ngram)):
+        number += alpha.index(ngram[i]) * (26 ** i)
+    return number
 
-def convert_to_text(num, n):
-    return ''
+def convert_to_text(num):
+
+    return
 
 test = "THEQUICKBROWNFOXJUMPEDOVERTHELAZYDOG"
 l = len(test)
 num = convert_to_num(test)
-answer = convert_to_text(num, l)
+answer = convert_to_text(num)
 print(num)
 print(answer)
 # If this worked, answer should be the same as test!

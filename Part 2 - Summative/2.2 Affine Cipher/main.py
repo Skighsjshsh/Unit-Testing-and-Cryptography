@@ -58,8 +58,13 @@ def convert_to_num(ngram):
     return number
 
 def convert_to_text(num):
-
-    return
+    word = ""
+    word += alpha[num % 26]
+    while (num // 26) != 0:
+        num = num // 26
+        index = num % 26
+        word += alpha[index]
+    return word
 
 test = "THEQUICKBROWNFOXJUMPEDOVERTHELAZYDOG"
 l = len(test)
